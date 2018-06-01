@@ -23,6 +23,9 @@ bootstrap = Bootstrap(app)
 moment = Moment(app)
 babel = Babel(app)
 
+from app.errors import bp as errors_bp  # noqa: F401
+app.register_blueprint(errors_bp)
+
 if not app.debug:
     if app.config['MAIL_SERVER']:
         auth = None
@@ -55,4 +58,4 @@ def get_locale():
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
-from app import routes, models, errors  # noqa: F401
+from app import routes, models  # noqa: F401
