@@ -1,5 +1,9 @@
 from flask import render_template
+<<<<<<< HEAD
 from app import app, db  # noqa F401
+=======
+from app import app, db
+>>>>>>> fb050833acdb41647e7a939c66c88e8d08861c2a
 from app.errors import bp
 
 @bp.app_errorhandler(404)
