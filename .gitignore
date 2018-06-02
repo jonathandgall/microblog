@@ -6,3 +6,4 @@ venv/
 .vscode/
 app.db
 logs/
+.env
